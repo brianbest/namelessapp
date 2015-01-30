@@ -6,23 +6,33 @@ angular.module('starter.controllers', [])
 
     .controller('routeDetailCtrl', function($scope, $stateParams, Routes) {
         $scope.route = Routes.get($stateParams.routeID);
-        $scope.starter = null;
+        $scope.starter = 0;
         $scope.ender = null;
         $scope.timeFind = null;
-        $scope.findTimes = function(){
+        $scope.destLook = [];
+        $scope.findTimes = function($scope){
             var startval = parseInt(document.getElementById('route_start').value),
                 endval = parseInt(document.getElementById('route_end').value);
 
             if (startval < endval){
                 //Use times
-                $scope.starter = [startval,startval];
-                $scope.ender = [endval,endval];
                 $scope.timeFind = $scope.route.times;
+                $scope.starter = startval;
+                $scope.ender = endval;
+                $scope.destLook = [startval,endval];
+
             }else if (startval > endval){
                 //Use Reverse times
-                $scope.starter = [startval,startval];
-                $scope.ender = [endval,endval];
-                $scope.timeFind = $scope.route.times;
+                var destlng = $scope.route.desti.length - 1;
+
+                var x = destlng - startval;
+                var y = destlng - endval;
+                console.log(destlng + ' ' + x +' '+ y);
+
+                $scope.timeFind = $scope.route.revTimes;
+                $scope.starter = startval;
+                $scope.ender = endval;
+                $scope.destLook = [x,y];
             }else{
                 // Do nothing they are equal
             }
