@@ -1,41 +1,29 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Cape Breton Transit">
   <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
-        </div>
+      <ion-list>
+          <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in routes" type="item-text-wrap" href="#/tab/dash/{{$index}}" >
+              <h2>{{item.name}}</h2>
+              <p>{{item.sub}}</p>
+              <i class="icon ion-chevron-right icon-accessory"></i>
+
+          </ion-item>
+      </ion-list>
 
 
-          <div ng-repeat="item in routes">
-            {{item.name}}
-              <table>
-            <tr>
-                <th ng-repeat="place in item.desti">{{place}}</th>
-            </tr>
-                  <tr ng-repeat="time in item.times">
-                      <td ng-repeat="thing in time">{{thing}}</td>
-                  </tr>
-          </table>
-          </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
+          <!--<div ng-repeat="item in routes">-->
+            <!--{{item.name}}-->
+              <!--<table>-->
+            <!--<tr>-->
+                <!--<th ng-repeat="place in item.desti">-->
+                    <!--{{place}}-->
+                <!--</th>-->
+            <!--</tr>-->
+                  <!--<tr ng-repeat="time in item.times">-->
+                      <!--<td ng-repeat="thing in time">{{thing}}</td>-->
+                  <!--</tr>-->
+          <!--</table>-->
+          <!--</div>-->
+
+
   </ion-content>
 </ion-view>

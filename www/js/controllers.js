@@ -4,6 +4,11 @@ angular.module('starter.controllers', [])
         $scope.routes = Routes.all();
     })
 
+    .controller('routeDetailCtrl', function($scope, $stateParams, Routes) {
+        $scope.route = Routes.get($stateParams.routeID);
+    })
+
+
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {

@@ -103,6 +103,7 @@ angular.module('starter.services', [])
         var route =[
             {
                 name : "Route 1",
+                sub  : "Sydney-Dominion-Glace Bay",
                 desti : ['Dorchester Street','Ashby Corner', 'Spar Road', 'Mayflower Mall', 'C.B.U.', 'Reserve', 'Dominion', 'Glace Bay'],
                 times : [
                     ['7:20','7:25','7:30','7:35','7:40','7:50', '---', '8:00'],
@@ -138,7 +139,70 @@ angular.module('starter.services', [])
                     ['21:00','21:15','21:20','21:30','21:35','21:40','21:50','22:00']
                 ]
 
-            }
+            },
+            {
+                name : "Route 3",
+                sub  : "Glace Bay - New Aberdeen",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 4",
+                sub  : "Glace Bay - Steels Hill",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 5",
+                sub  : "Sydney - North Sydney - Sydney Mines",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 8",
+                sub  : "Sydney - Whitney Pier",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 9",
+                sub  : "Sydney - New Waterford",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 10",
+                sub  : "Sydney - Alexandra Street",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 11",
+                sub  : "Sydney - Ashby",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 12",
+                sub  : "Sydney - Sydney River",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
+            {
+                name : "Route 13",
+                sub  : "George Street - Cottage Road",
+                desti : [],
+                time : [],
+                revTimes : []
+            },
         ];
 
 
@@ -147,9 +211,9 @@ angular.module('starter.services', [])
             all: function() {
                 return route;
             },
-            get: function(friendId) {
+            get: function(routeID) {
                 // Simple index lookup
-                return route[0];
+                return route[routeID];
             }
         }
     });
