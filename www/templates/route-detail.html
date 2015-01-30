@@ -1,8 +1,50 @@
 <ion-view view-title="{{route.name}}">
     <ion-content class="padding">
 
-        <p>
-            {{route.desti}}
-        </p>
+        <!--<select>-->
+            <!--<option ng-repeat="dest in route.desti" value="{{$index}}"> {{dest}}</option>-->
+        <!--</select>-->
+        <!--<select>-->
+            <!--<option ng-repeat="dest in route.desti" value="{{$index}}"> {{dest}}</option>-->
+        <!--</select>-->
+
+        <div class="list">
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Start
+                </div>
+                <select>
+                    <option ng-repeat="dest in route.desti" value="{{$index}}"> {{dest}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    End
+                </div>
+                <select>
+                    <option ng-repeat="dest in route.desti" value="{{$index}}"> {{dest}}</option>
+                </select>
+            </label>
+
+        </div>
+
+
+        <button class="button button-block button-balanced">
+            Search
+        </button>
+        <!--<table>-->
+            <!--<tr>-->
+
+                <!--<th ng-repeat="dest in route.desti"> {{dest}} </th>-->
+            <!--</tr>-->
+
+            <!--<tr ng-repeat="time in route.times">-->
+                <!--<td ng-repeat="thing in time">-->
+                    <!--{{thing}}-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+
     </ion-content>
 </ion-view>

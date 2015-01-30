@@ -144,65 +144,65 @@ angular.module('starter.services', [])
                 name : "Route 3",
                 sub  : "Glace Bay - New Aberdeen",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 4",
                 sub  : "Glace Bay - Steels Hill",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 5",
                 sub  : "Sydney - North Sydney - Sydney Mines",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 8",
                 sub  : "Sydney - Whitney Pier",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 9",
                 sub  : "Sydney - New Waterford",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 10",
                 sub  : "Sydney - Alexandra Street",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 11",
                 sub  : "Sydney - Ashby",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 12",
                 sub  : "Sydney - Sydney River",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
             },
             {
                 name : "Route 13",
                 sub  : "George Street - Cottage Road",
                 desti : [],
-                time : [],
+                times : [],
                 revTimes : []
-            },
+            }
         ];
 
 
