@@ -21,3 +21,30 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+
+table{
+    background: #FFFFFF;
+    margin-bottom: 1.11111rem;
+    border: solid 1px #DDDDDD;
+    table-layout: auto;
+    width: 100%;
+
+    thead {
+        background: #F5F5F5;
+    }
+    th{
+        padding: 0.44444rem 0.55556rem 0.55556rem;
+        font-size: 0.77778rem;
+        font-weight: bold;
+        color: #222222;
+    }
+    td{
+        padding: 0.5rem 0.55556rem;
+        font-size: 0.77778rem;
+        color: #222222;
+        text-align: center;
+    }
+    tr:nth-of-type(even) {
+        background: #F9F9F9;
+    }
+}

@@ -10,16 +10,19 @@ angular.module('starter.controllers', [])
         $scope.ender = null;
         $scope.timeFind = null;
         $scope.destLook = [];
+        $scope.errCatch = null;
         $scope.findTimes = function($scope){
             var startval = parseInt(document.getElementById('route_start').value),
                 endval = parseInt(document.getElementById('route_end').value);
 
             if (startval < endval){
                 //Use times
+
                 $scope.timeFind = $scope.route.times;
                 $scope.starter = startval;
                 $scope.ender = endval;
                 $scope.destLook = [startval,endval];
+                $scope.errCatch = null;
 
             }else if (startval > endval){
                 //Use Reverse times
@@ -27,12 +30,18 @@ angular.module('starter.controllers', [])
 
                 var x = destlng - startval;
                 var y = destlng - endval;
-                console.log(destlng + ' ' + x +' '+ y);
+                console.log($scope.route.revTimes.length);
+                if ($scope.route.revTimes.length === 1){
 
-                $scope.timeFind = $scope.route.revTimes;
-                $scope.starter = startval;
-                $scope.ender = endval;
-                $scope.destLook = [x,y];
+                    $scope.errCatch = 'This Route is circular, your destination is past prior to your start location.'
+                }else{
+                    $scope.timeFind = $scope.route.revTimes;
+                    $scope.starter = startval;
+                    $scope.ender = endval;
+                    $scope.destLook = [x,y];
+                    $scope.errCatch = null;
+                }
+
             }else{
                 // Do nothing they are equal
             }
